@@ -1,0 +1,16 @@
+compras = [
+    {"item": "Maçã", "preco": 3.50},
+    {"item": "Pão", "preco": 5.00},
+    {"item": "Leite", "preco": 4.20},
+    {"item": "Café", "preco": 12.80}
+]
+
+total = 0
+
+print("--- RESUMO DA COMPRA ---")
+for produto in compras:
+    print(f"- {produto['item']}: R$ {produto['preco']:.2f}")
+    total += produto['preco']
+
+print("------------------------")
+print(f"Total: R$ {total:.2f}")
