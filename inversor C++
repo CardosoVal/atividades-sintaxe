@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string texto;
+    std::cout << "Digite uma palavra ou frase: ";
+    std::getline(std::cin, texto);
+
+    std::string texto_invertido = "";
+
+    for (int i = texto.length() - 1; i >= 0; i--) {
+        texto_invertido += texto[i];
+    }
+
+    std::cout << "Texto invertido: " << texto_invertido << "\n";
+
+    return 0;
+}
