@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip>
+
+struct Item {
+    std::string nome;
+    double preco;
+};
+
+int main() {
+    std::vector<Item> compras = {
+        {"Maçã", 3.50},
+        {"Pão", 5.00},
+        {"Leite", 4.20},
+        {"Café", 12.80}
+    };
+
+    double total = 0.0;
+
+    std::cout << "--- RESUMO DA COMPRA ---\n";
+    for (const auto& produto : compras) {
+        std::cout << "- " << produto.nome << ": R$ " << std::fixed << std::setprecision(2) << produto.preco << "\n";
+        total += produto.preco;
+    }
+
+    std::cout << "------------------------\n";
+    std::cout << "Total: R$ " << total << "\n";
+
+    return 0;
+}
